@@ -1,0 +1,38 @@
+/* login */
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-section {
+  max-width: 500px;
+  width: 500px;
+  padding: 40px;
+}
+
+.login-form input {
+  max-width: 500px;
+}
+.login-form button {
+  background-color: var(--bg-btn-inactive);
+  color: var(--text-reverse);
+  border: 1px solid var(--border-nav);
+}
+.login-form button.active {
+  background-color: var(--bg-btn-active);
+  color: var(--text-main);
+  border: 1px solid var(--border-nav-active);
+}
+.login-form button.active:hover {
+  background-color: var(--hover-btn);
+}
+.login-form div:nth-child(1) input {
+  border-radius: 3px 3px 0 0;
+}
+.login-form div:nth-child(2) input {
+  border-radius: 0 0 3px 3px;
+}
+.login-form button {
+  max-width: 500px;
+}

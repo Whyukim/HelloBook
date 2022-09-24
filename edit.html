@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Developer Hyuk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/favicon/favicon.svg" />
+
+    <!-- link CSS -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/add.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="container header-container">
+        <div class="logo"><a href="/" class="logo">Hello Books.</a></div>
+        <div class="header-btn">
+          <div class="logout-container">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="btns">
+            <button class="logout-btn">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <nav class="navigation">
+        <div class="nav-items">
+          <div class="moon-mode">🌚</div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="add container" role="main">
+      <section class="inner add-section active">
+        <div class="title">ADD BOOK.</div>
+
+        <form class="add-form form-container">
+          <h5 class="sub-title">제목</h5>
+          <div class="title-check input-container">
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="focus"
+              value=""
+              required
+            />
+            <label class="check"></label>
+          </div>
+          <h5 class="sub-title">설명</h5>
+          <div class="message-check input-container">
+            <input
+              type="text"
+              name="message"
+              id="message"
+              class="focus"
+              value=""
+              required
+            />
+            <label class="check"></label>
+          </div>
+          <h5 class="sub-title">작가</h5>
+          <div class="author-check input-container">
+            <input
+              type="text"
+              name="author"
+              id="author"
+              class="focus"
+              value=""
+              required
+            />
+            <label class="check"></label>
+          </div>
+          <h5 class="sub-title">URL 주소</h5>
+          <div class="url-check input-container">
+            <input
+              type="text"
+              name="url"
+              id="url"
+              class="focus"
+              value=""
+              required
+            />
+            <label class="check"></label>
+          </div>
+          <div class="btn-container">
+            <button class="btn btn-back">뒤로가기</button>
+            <button class="edit-btn btn-active" type="submit">수정하기</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-text">
+          Github:
+          <a
+            class="tag"
+            href="https://github.com/woo1038/Vanilla_JS_Books"
+            target="_blank"
+            >Vanilla_JS_Books</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/dark.js"></script>
+    <script type="module" src="js/edit.js"></script>
+  </body>
+</html>

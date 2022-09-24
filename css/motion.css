@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+/* 1. background & color  */
+.paperback_front {
+  background-color: #000;
+  backface-visibility: hidden;
+}
+
+.paperback_front::after {
+  content: "";
+  background-image: linear-gradient(
+    -135deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    transparent 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.paperback_back {
+  background-color: #333;
+}
+
+.ruled_paper > li {
+  background-color: var(--book-paper);
+  background-size: 100% 0.6em;
+  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1),
+    inset -1px 0px 1px rgba(150, 150, 150, 0.2);
+  border-radius: 0px 10px 10px 0px;
+}
+.paperback_front > li > span {
+  position: absolute;
+  transform: rotateZ(45deg) translateZ(1px);
+}
+
+/*
+	2. opening cover, back cover and pages
+*/
+
+.paperback_front {
+  transform: rotateY(-38deg) translateZ(0px);
+  z-index: 100;
+}
+
+.paperback_back {
+  transform: rotateY(-25deg);
+}
+
+.ruled_paper li:nth-child(1) {
+  transform: rotateY(-27deg);
+}
+
+.ruled_paper li:nth-child(2) {
+  transform: rotateY(-29deg);
+}
+
+.ruled_paper li:nth-child(3) {
+  transform: rotateY(-31deg);
+}
+
+.ruled_paper li:nth-child(4) {
+  transform: rotateY(-33deg);
+}
+
+.ruled_paper li:nth-child(5) {
+  transform: rotateY(-35deg);
+}
+
+/*
+	3. position, transform y transition
+*/
+
+.paperback_front,
+.paperback_back,
+.paperback_front li,
+.paperback_back li {
+  border-radius: 2px 8px 8px 2px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  transform-style: preserve-3d;
+}
+
+.paperback_front,
+.paperback_back {
+  transform-origin: top left;
+}
+
+.paperback_front {
+  transition: all 0.5s ease;
+}
+
+.paperback_front li img,
+.paperback_back li img {
+  border-radius: 2px 8px 8px 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Ruled paper */
+
+.ruled_paper,
+.ruled_paper > li {
+  position: absolute;
+  transform-style: preserve-3d;
+  margin: 0;
+}
+
+.ruled_paper {
+  width: 98%;
+  height: 98%;
+  top: 1%;
+  left: 1%;
+  z-index: 10;
+}
+
+.ruled_paper > li {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0px 1px #474747;
+}
+
+.ruled_paper > li {
+  transform-origin: left center;
+  transition-property: transform;
+  transition-timing-function: ease;
+}
+
+.ruled_paper li:nth-child(1) {
+  transition-duration: 0.6s;
+}
+
+.ruled_paper li:nth-child(2) {
+  transition-duration: 0.6s;
+}
+
+.ruled_paper li:nth-child(3) {
+  transition-duration: 0.4s;
+}
+
+.ruled_paper li:nth-child(4) {
+  transition-duration: 0.5s;
+}
+
+.ruled_paper li:nth-child(5) {
+  transition-duration: 0.5s;
+}
+
+/*
+	4. events
+*/
+
+.book-box:hover .book,
+.book.active {
+  left: 68%;
+}
+.book-box:hover .book > .paperback_front,
+.book.active > .paperback_front {
+  transform: rotateY(-125deg) translateZ(0px);
+  z-index: 0;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(1),
+.book.active > .ruled_paper li:nth-child(1) {
+  transform: rotateY(-30deg);
+  transition-duration: 1.5s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(2),
+.book.active > .ruled_paper li:nth-child(2) {
+  transform: rotateY(-35deg);
+  transition-duration: 1.8s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(3),
+.book.active > .ruled_paper li:nth-child(3) {
+  transform: rotateY(-110deg);
+  transition-duration: 2.2s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(4),
+.book.active > .ruled_paper li:nth-child(4) {
+  transform: rotateY(-115deg);
+  transition-duration: 1.8s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(5),
+.book.active > .ruled_paper li:nth-child(5) {
+  transform: rotateY(-120deg);
+  transition-duration: 1.2s;
+}
+
+/* active */
+
+.book-box:hover .book,
+.book.active {
+  left: 68%;
+}
+.book-box:hover .book > .paperback_front,
+.book.active > .paperback_front {
+  transform: rotateY(-125deg) translateZ(0px);
+  z-index: 0;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(1),
+.book.active > .ruled_paper li:nth-child(1) {
+  transform: rotateY(-30deg);
+  transition-duration: 1.5s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(2),
+.book.active > .ruled_paper li:nth-child(2) {
+  transform: rotateY(-35deg);
+  transition-duration: 1.8s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(3),
+.book.active > .ruled_paper li:nth-child(3) {
+  transform: rotateY(-110deg);
+  transition-duration: 2.2s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(4),
+.book.active > .ruled_paper li:nth-child(4) {
+  transform: rotateY(-115deg);
+
+  transition-duration: 1.8s;
+}
+
+.book-box:hover .book > .ruled_paper li:nth-child(5),
+.book.active > .ruled_paper li:nth-child(5) {
+  transform: rotateY(-120deg);
+
+  transition-duration: 1.2s;
+}
+
+/*
+	5. Bonus
+*/
+
+/* Basic ribbon */
+
+.ribbon {
+  display: block;
+  position: absolute;
+  top: 11px;
+  right: 1px;
+  width: 40px;
+  height: 20px;
+  background: #c0392b;
+  color: #fff;
+  font-size: 0.6em;
+  text-align: center;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  transform: rotateZ(45deg) translateZ(1px);
+  backface-visibility: hidden;
+  z-index: 10;
+}
+.title {
+  padding: 20px;
+  backface-visibility: hidden;
+  color: var(--text-main);
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #c0392b;
+  border-top: 20px solid transparent;
+}
+
+.ribbon::before {
+  left: -20px;
+  border-left: 20px solid transparent;
+}
+
+.ribbon::after {
+  right: -20px;
+  border-right: 20px solid transparent;
+}

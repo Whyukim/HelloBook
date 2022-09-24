@@ -1,0 +1,56 @@
+/* nav */
+.navigation {
+  position: absolute;
+  right: 58px;
+  bottom: 110px;
+}
+.navigation .nav-items {
+  display: flex;
+  gap: 5px;
+}
+.navigation .nav-items > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 30px;
+  padding-bottom: 2px;
+  border: 2px solid var(--border-nav);
+  background: var(--bg-nav);
+  box-shadow: 0px 0px 3px 1px var(--shadow-main);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  color: var(--bg-arrow);
+  transition: all 0.125s ease-in 0s;
+}
+.navigation .nav-items > div:hover {
+  background-color: var(--hover-nav);
+}
+.navigation .nav-items .moon-mode {
+  text-shadow: 0px 0px 5px var(--shadow-moon), 0px 0px 5px var(--shadow-moon),
+    0px 0px 5px var(--shadow-moon), 0px 0px 5px var(--shadow-moon);
+}
+.navigation .nav-items > div.active {
+  color: var(--bg-arrow-active);
+  text-shadow: 0px 0px 5px var(--shadow-arrow), 0px 0px 5px var(--shadow-arrow),
+    0px 0px 5px var(--shadow-arrow), 0px 0px 5px var(--shadow-arrow);
+}
+.navigation .nav-items .top-scroll {
+  color: var(--bg-arrow);
+  transform: rotate(270deg);
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -4rem top; /*50px*/
+  }
+
+  70% {
+    background-position: 12.5rem top; /*200px*/
+  }
+
+  100% {
+    background-position: 12.5rem top; /*200px*/
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Developer Hyuk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/favicon/favicon.svg" />
+
+    <!-- link CSS -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/book.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="container header-container">
+        <div class="logo"><a href="/" class="logo">Hello Books.</a></div>
+        <div class="header-btn">
+          <div class="logout-container">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="btns">
+            <button class="logout-btn">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <nav class="navigation">
+        <div class="nav-items">
+          <div class="moon-mode">🌚</div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div class="container">
+        <ul class="inner title-container">
+          <li class="title">Hello Books.</li>
+          <li class="sub-title">This is a project made up of JavaScript.</li>
+          <li>
+            <a href="/add.html" class="btn">책 추가하기</a>
+          </li>
+        </ul>
+        <ul class="inner books-items">
+          <li class="books-item">
+            <div class="item-header">
+              <h3 class="title">title</h3>
+              <span class="date">2022.8.31</span>
+            </div>
+            <div class="item-detail">
+              <div>
+                <h3 class="sub-title">책소개</h3>
+                <p class="description">이러이러한 내용입니다</p>
+              </div>
+              <div>
+                <label class="sub-title">글쓴이 - </label>
+                <span>hello</span>
+              </div>
+              <div>
+                <label class="sub-title">링크 - </label>
+                <a class="link" href="/">바로가기</a>
+              </div>
+            </div>
+            <div class="item-btn">
+              <a href="/" class="btn">뒤로가기</a>
+              <button class="btn btn-edit">수정하기</button>
+              <button class="btn btn-delete">삭제하기</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-text">
+          Github:
+          <a
+            class="tag"
+            href="https://github.com/woo1038/Vanilla_JS_Books"
+            target="_blank"
+            >Vanilla_JS_Books</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/dark.js"></script>
+    <script type="module" src="js/book.js"></script>
+  </body>
+</html>

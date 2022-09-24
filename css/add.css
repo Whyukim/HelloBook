@@ -1,0 +1,36 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 105px);
+}
+.add-section {
+  width: 100%;
+}
+.add-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.add-form h5 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.add-form div input {
+  border-radius: 3px;
+}
+
+.add-form .add-btn {
+  background-color: var(--bg-btn-inactive);
+  color: var(--text-reverse);
+  border: 1px solid var(--border-nav);
+}
+.add-form .add-btn.active {
+  background-color: var(--bg-btn-active);
+  color: var(--text-main);
+  border: 1px solid var(--border-btn);
+}
+.add-form .add-btn.active:hover,
+.add-form a:hover {
+  background-color: var(--hover-btn);
+}

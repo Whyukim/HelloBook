@@ -1,0 +1,40 @@
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-footer);
+  box-shadow: 0px 0px 7px 0px var(--shadow-cloudy);
+  color: var(--text-main);
+  height: 70px;
+  width: 100%;
+}
+.tag {
+  transition: background-position 0.125s ease-in 0s;
+}
+.tag:hover {
+  background: var(--ani-color1) -webkit-gradient(linear, 100% 0, 0 0, from(var(--ani-color2)), color-stop(0.5, var(--ani-color3)), to(var(--ani-color4)));
+  font-weight: bold;
+  background-position: -4rem top;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation-name: shimmer;
+  -webkit-animation-duration: 2.2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-background-size: 4rem 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -4rem top;
+  }
+
+  70% {
+    background-position: 12.5rem top;
+  }
+
+  100% {
+    background-position: 12.5rem top;
+  }
+}

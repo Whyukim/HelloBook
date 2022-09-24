@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Hyuk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/favicon/favicon.svg" />
+
+    <!-- link CSS -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navigation">
+        <div class="nav-items">
+          <div class="moon-mode">🌚</div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="login container" role="main">
+      <section class="inner login-section active">
+        <div class="title">Login.</div>
+
+        <form class="login-form form-container">
+          <div class="email-check input-container">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="focus"
+              value=""
+              required
+            />
+            <label class="check"></label>
+          </div>
+          <div class="password-check input-container">
+            <input
+              type="password"
+              name="password"
+              class="focus"
+              id="password"
+              value=""
+              required
+            />
+            <label class="check"></label>
+          </div>
+          <div class="btn-container">
+            <button class="login-btn btn-active" type="submit">로그인</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="js/dark.js"></script>
+    <script type="module" src="./js/login.js"></script>
+  </body>
+</html>
