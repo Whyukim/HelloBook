@@ -1,21 +1,7 @@
-# Fast campus Online JavaScript Project
-
-[Slide](https://slides.com/woongjae/fc-javascript)
-
 ```
 npm i
 npm start
 ```
-
-id: test@marktube.tv
-pw: 1234
-
-skill
-
-- fetch
-- localStore
-- module: import, export
-- css root
 
 - 22.05.08
 
