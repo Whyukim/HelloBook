@@ -25,7 +25,7 @@ const getDateDiffer = (get) => {
 const login = async () => {
   const token = getToken();
   if (!token) {
-    location.assign("/login.html");
+    location.assign("./login.html");
     return;
   }
 };
@@ -33,7 +33,7 @@ const login = async () => {
 const addBooks = async () => {
   const addBtn = document.querySelector(".add-btn");
   addBtn.addEventListener("click", () => {
-    location.assign("/add.html");
+    location.assign("./add.html");
   });
 };
 

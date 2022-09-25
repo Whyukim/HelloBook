@@ -12,7 +12,7 @@ const getBookList = () => {
 const login = async () => {
   const token = getToken();
   if (!token) {
-    location.assign("/login.html");
+    location.assign("./login.html");
     return;
   }
 };
@@ -159,7 +159,7 @@ const addBook = async (e) => {
   try {
     list.push(obj);
     localStorage.setItem("item", JSON.stringify(list));
-    location.assign("/");
+    location.assign("index.html");
   } catch (error) {
     console.log("save error", error);
     alert("책 추가 실패");

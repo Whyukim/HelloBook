@@ -94,39 +94,7 @@ const login = async (e) => {
     localStorage.setItem("item", JSON.stringify(profile.notice));
   }
 
-  location = "/";
-
-  // const email = document.querySelector("#email").value;
-  // const password = document.querySelector("#password").value;
-
-  // try {
-  //   const res = await loginApi("https://api.marktube.tv/v1/me", {
-  //     email,
-  //     password,
-  //   });
-
-  //   console.log(res);
-  //   const { token } = res.data;
-  //   if (!token) {
-  //     return;
-  //   }
-
-  // localStorage.setItem("token", token);
-  //   location = "/";
-  // } catch (error) {
-  //   const data = error.response.data;
-
-  //   if (data) {
-  //     const state = data.error;
-
-  //     if (state === "USER_NOT_EXIST") {
-  //       alert("사용자가 존재하지 않습니다.");
-  //     } else if (state === "PASSWORD_NOT_MATCH") {
-  //       alert("비밀번호가 틀렸습니다.");
-  //     }
-  //     console.log(form);
-  //   }
-  // }
+  window.location.href = "index.html";
 };
 
 const loginButton = async () => {

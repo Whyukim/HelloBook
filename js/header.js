@@ -16,7 +16,7 @@ const logout = async () => {
     console.log("logout error", error);
   } finally {
     localStorage.removeItem("token");
-    location.assign("/login.html");
+    location.assign("./login.html");
   }
 };
 
